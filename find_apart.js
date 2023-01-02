@@ -28,13 +28,13 @@ var blocks = [
   
   var reqs = ["gym", "school", "store"];
   
-  find_best_apartment(reqs, blocks);
+  apartmentHunting(blocks,reqs);
   
   
   
   // function to return the short_listed blocks
   
-  function find_best_apartment(reqs, blocks) {
+  function apartmentHunting(blocks,reqs) {
     var scores = [];
     blocks.map((block) => {
       scores.push(getScore(block, reqs));
@@ -139,6 +139,10 @@ var blocks = [
     });
     return min;
   }
+
+
+
+  exports.apartmentHunting = apartmentHunting;
   
   
   //Hoping to hear from HR
